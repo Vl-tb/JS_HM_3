@@ -53,7 +53,6 @@ function createDelete(event) {
         newDiv.classList.add('box');
         newDiv.appendChild(text);
         newDiv.addEventListener('mousedown', moveProc);
-        newDiv.addEventListener('dragstart', ()=>{return false});
         newDiv.addEventListener('contextmenu', changeColor);
         newDiv.addEventListener('click', resize);
         newDiv.addEventListener('dblclick', createDelete);
@@ -73,7 +72,6 @@ function createDelete(event) {
 
 [...boxes].forEach(element => {
     element.addEventListener('mousedown', moveProc);
-    element.addEventListener('dragstart', ()=>{return false});
     element.addEventListener('contextmenu', changeColor);
     element.addEventListener('click', resize);
     element.addEventListener('dblclick', createDelete);
